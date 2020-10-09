@@ -1,0 +1,55 @@
+{
+  "name": "eslint-config-yyl-ts",
+  "version": "0.1.0",
+  "description": "eslint config for yyl-ts",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --config ./.eslintrc.json --ext=jsx,ts,tsx ./test/base/src",
+    "prettier": "prettier --write ./test/base/src/**/*.{ts,tsx,js}",
+    "test": "npm run eslint && npm run prettier && npm run eslint",
+    "prepublishOnly": "npm test"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "parser": "typescript",
+    "quoteProps": "consistent",
+    "trailingComma": "none",
+    "printWidth": 100
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackness1208/eslint-config-yyl-ts.git"
+  },
+  "author": "jackness",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackness1208/eslint-config-yyl-ts/issues"
+  },
+  "homepage": "https://github.com/jackness1208/eslint-config-yyl-ts#readme",
+  "peerDependencies": {
+    "eslint": ">=6.6.0",
+    "prettier": ">=1.0.0",
+    "typescript": ">=3.5.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  }
+}
