@@ -22,7 +22,7 @@ const arr = [
     path: '/vue2',
     allblue: {
       name: 'allblue_demo_child_vue2',
-      entry: '//webtest.yy.com/allblue_demo_child_vue2/',
+      entry: '//webtest.testhost.com/allblue_demo_child_vue2/',
       activePath: `/vue2`
     }
   },
@@ -32,7 +32,7 @@ const arr = [
     path: '/react',
     allblue: {
       name: 'allblue_demo_child_react',
-      entry: '//webtest.yy.com/allblue_demo_child_react/',
+      entry: '//webtest.testhost.com/allblue_demo_child_react/',
       activePath: `/react`
     }
   },
@@ -49,7 +49,7 @@ const arr = [
           path: '/QUERY.test_child',
           allblue: {
             name: 'QUERY.test_child',
-            entry: '//webtest.yy.com/QUERY.test_child/',
+            entry: '//webtest.testhost.com/QUERY.test_child/',
             activePath: '/QUERY.test_child'
           }
         }
@@ -76,7 +76,7 @@ export const setLocalCookie = (k: string, v: any, t?: number, domain?: string): 
     ? localStorage.setItem(k, v)
     : (function() {
         t = t || 365 * 12 * 60 * 60
-        domain = domain || '.yy.com'
+        domain = domain || '.testhost.com'
         document.cookie = k + '=' + v + ';max-age=' + t + ';domain=' + domain + ';path=/'
       })()
 }
